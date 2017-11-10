@@ -6,9 +6,79 @@
   <body class="page">
     %=symbols=%
     <div class="page__wrapper">
-      <header class="page-header"></header>
-      <main class="page-content"></main>
-      <footer class="page-footer"></footer>
+      <header class="page-header">
+        <div class="logo">
+          <a href="#"><img src="%=static=%img/content/logo.svg" alt="Logo"></a>
+        </div>
+        <nav class="main-nav">
+          <ul class="main-nav__list">
+            <li class="main-nav__items"><a href="#" class="main-nav__item">Projects</a></li>
+            <li class="main-nav__items"><a href="#" class="main-nav__item main-nav__item--active">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="page-content">
+        <div class="block-description">
+          <div class="block-description__wrap">
+            <div class="block-description__img">
+              <img src="%=static=%img/content/dottedBg-rectangle.svg" alt="Bg">
+            </div>
+            <div class="block-description__border"></div>
+            <h2 class="block-description__headline">Hi! I’m Max</h2>
+            <p class="block-description__text">I am a logo master with more than 5 years of experience</p>
+            <div class="block-description__linkWrap">
+              <a href="#" class="block-description__link">Check out my portfolio</a>
+            </div>
+            <div class="block-description__img block-description__img--square">
+              <img src="%=static=%img/content/dottedBg-square.svg" alt="Bg">
+            </div>
+          </div>
+        </div>
+        <div class="author-img">
+          <img src="%=static=%img/content/author-img.png" alt="Max">
+        </div>
+      </main>
+      <footer class="page-footer">
+        <div class="socials">
+          <a href="#" class="socials__link socials__link--fb"></a>
+          <a href="#" class="socials__link socials__link--dr"></a>
+          <a href="#" class="socials__link socials__link--be"></a>
+        </div>
+        <div class="copyright">
+          <p>All Rights Reserved.</p>
+        </div>
+        <div class="contact">
+          <a href="#" class="contact__link"></a>
+          <div class="contact__popup">
+            <span class="contact__popup-close">Close</span>
+            <div class="contact__popup-nav"></div>
+            <div class="contact__popup-formWrap">
+              <div class="contact__popup-form-border"></div>
+              <h2 class="contact__popup-form-headline">Contact Me</h2>
+              <p class="contact__popup-form-text">Here you can ask me your question</p>
+              <form action="action.php" class="contact__popup-form">
+                <ul class="contact__popup-form-list">
+                  <li class="contact__popup-form-items">
+                    <label for="name">Your Name:</label>
+                    <input id="name" type="text" name="name">
+                  </li>
+                  <li class="contact__popup-form-items">
+                    <label for="email">Your Email:</label>
+                    <input id="email" type="email" name="name">
+                  </li>
+                  <li class="contact__popup-form-items">
+                    <label for="message">Describe Your Task</label>
+                    <textarea id="message" name="message"></textarea>
+                  </li>
+                  <li class="contact__popup-form-items">
+                    <button class="contact__popup-form-button" type="submit">Send message</button>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>

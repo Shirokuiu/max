@@ -1,0 +1,1 @@
+{"version":3,"sources":["markup/static/js/libraries/jq-code.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA","file":"main.js","sourcesContent":["var contact = $('.contact');\nvar contactPopup = $('.contact__popup');\n\ncontact.on('click', function () {\n  contactPopup.addClass('contact__popup--vissible');\n});"]}

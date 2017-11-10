@@ -1,0 +1,38 @@
+.contact__link {
+  position: relative;
+  
+  display: block;
+  width: 61px;
+  height: 61px;
+  
+  box-shadow: 1px 0px 69px rgba(239, 92, 92, 0.3);
+  background-color: #ef5c5c;
+  border-radius: 50%;
+  &::before {
+    content: '';
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    margin: auto;
+    
+    .bg-svg(@contacts);
+  }
+}
+
+.contact__popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  margin: auto;
+  &--vissible {
+    display: block;
+  }
+}
