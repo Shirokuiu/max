@@ -1,0 +1,21 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+  <head>
+    {{> head/head head.defaults}}
+  </head>
+  <body class="page">
+    %=symbols=%
+    <div class="page__wrapper">
+      <header class="page-header"></header>
+      <main class="page-content"></main>
+      <footer class="page-footer"></footer>
+    </div>
+
+    <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+    <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+  </body>
+</html>
