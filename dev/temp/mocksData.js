@@ -24,6 +24,9 @@ _template: {
 },
 
 __pages: [{
+                name: 'case-everest',
+                href: 'case-everest.html'
+             },{
                 name: 'index',
                 href: 'index.html'
              }]
