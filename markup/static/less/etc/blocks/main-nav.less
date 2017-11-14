@@ -18,14 +18,19 @@
       align-items: center;
     }
     .main-nav__items {
+      margin-right: 0;
       &:first-child {
         order: 1;
         margin-right: 0;
       }
       .main-nav__item {
+        display: block;
         &--home {
           position: relative;
           left: -17px;
+        }
+        &--case {
+          display: none;
         }
       }
     }

@@ -29,4 +29,7 @@ __pages: [{
              },{
                 name: 'index',
                 href: 'index.html'
+             },{
+                name: 'projects',
+                href: 'projects.html'
              }]
