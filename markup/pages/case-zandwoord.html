@@ -1,0 +1,91 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+  <head>
+    {{> head/head head.caseZendwoord}}
+  </head>
+  <body class="page">
+    %=symbols=%
+    <div class="page__wrapper">
+      <header class="page-header">
+        <div class="logo">
+          <a href="index.html"><img src="%=static=%img/content/logo.svg" alt="Logo"></a>
+        </div>
+        <nav class="main-nav main-nav--case main-nav--innerPage">
+          <ul class="main-nav__list">
+            <li class="main-nav__items"><a href="#" class="main-nav__item main-nav__item--project">Projects</a></li>
+            <li class="main-nav__items"><a href="index.html" class="main-nav__item main-nav__item--home main-nav__item--active">Home</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main class="page-content page-content--case">
+        <div class="case-logo case-logo--zendwoord">
+          <img src="%=static=%img/content/projects-slider-bridge.svg" width="230" height="127" alt="Everest">
+        </div>
+        <div class="case-description">
+          <div class="case-description-block case-description-block--title">
+            <div class="block-description__border block-description__border--case"></div>
+            <h2 class="case-description__headline">Connecting People App</h2>
+          </div>
+          <div class="case-description-block case-description-block--text">
+            <p class="case-description__text case-description__text--zendwoord">Bolstered with a new identity, Equestrian Canada, the Canadian federation for equestrian sport mandated Locomotive with the redesign of its portal. The tram is a thing of a past, a thing from our childhood.</p>
+          </div>
+        </div>
+        <div class="case-description__blockDots">
+          <img src="%=static=%img/content/case-dots.svg" alt="Dots">
+        </div>
+      </main>
+      <footer class="page-footer">
+        <div class="socials">
+          <a href="#" class="socials__link socials__link--fb"></a>
+          <a href="#" class="socials__link socials__link--dr"></a>
+          <a href="#" class="socials__link socials__link--be"></a>
+        </div>
+        <div class="copyright">
+          <p>All Rights Reserved.</p>
+        </div>
+        <div class="case-nav">
+          <a href="#" class="case-nav__item case-nav__item--prev">Previous</a>
+          <a href="case-everest.html" class="case-nav__item case-nav__item--next">Next</a>
+        </div>
+        <div class="contact">
+          <a href="#" class="contact__link"></a>
+          <div class="contact__popup">
+            <span class="contact__popup-close">Close</span>
+            <div class="contact__popup-nav"></div>
+            <div class="contact__popup-formWrap">
+              <div class="contact__popup-form-border"></div>
+              <h2 class="contact__popup-form-headline">Contact Me</h2>
+              <p class="contact__popup-form-text">Here you can ask me your question</p>
+              <form action="action.php" class="contact__popup-form">
+                <ul class="contact__popup-form-list">
+                  <li class="contact__popup-form-items">
+                    <label for="name">Your Name:</label>
+                    <input id="name" type="text" name="name" required>
+                  </li>
+                  <li class="contact__popup-form-items">
+                    <label for="email">Your Email:</label>
+                    <input id="email" type="email" name="name" required>
+                  </li>
+                  <li class="contact__popup-form-items contact__popup-form-items--textarea">
+                    <label for="message">Describe Your Task</label>
+                    <textarea id="message" name="message" required></textarea>
+                  </li>
+                  <li class="contact__popup-form-items contact__popup-form-items--button">
+                    <button class="contact__popup-form-button" type="submit">Send message</button>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="%=static=%js/separate-js/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+
+    <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
+  </body>
+</html>

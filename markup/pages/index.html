@@ -5,6 +5,9 @@
   </head>
   <body class="page">
     %=symbols=%
+    <div class="preloader">
+      <h2 class="preloader__text">Loading</h2>
+    </div>
     <div class="page__wrapper">
       <header class="page-header">
         <div class="logo">
@@ -27,7 +30,7 @@
             <h2 class="block-description__headline">Hi! I’m Max</h2>
             <p class="block-description__text">I am a logo master with more than 5 years of experience</p>
             <div class="block-description__linkWrap">
-              <a href="#" class="block-description__link">Check out my portfolio</a>
+              <a href="projects.html" class="block-description__link">Check out my portfolio</a>
             </div>
             <div class="block-description__img block-description__img--square">
               <img src="%=static=%img/content/dottedBg-square.svg" alt="Bg">
@@ -86,6 +89,14 @@
 
     <!-- Main scripts. You can replace it, but I recommend you to leave it here     -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+      $(window).on('load', function () {
+        $preloader = $('.preloader'),
+          $loader = $preloader.find('.preloader__text');
+        $loader.fadeOut();
+        $preloader.delay(350).fadeOut('slow');
+      });
+    </script>
     <script src="%=static=%js/main%=hash=%%=min=%.js"></script>
   </body>
 </html>

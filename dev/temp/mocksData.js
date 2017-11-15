@@ -18,14 +18,29 @@ _template: {
 
 'head': {
     defaults: {
-        title: 'default title',
+        title: 'Max Iskra',
         useSocialMetaTags: true
+    },
+    project: {
+      title: 'Projects',
+      useSocialMetaTags: true
+    },
+    caseZendwoord: {
+      title: 'Case Zendwoord',
+      useSocialMetaTags: true
+    },
+    caseEverest: {
+      title: 'Case Everest',
+      useSocialMetaTags: true
     }
 },
 
 __pages: [{
                 name: 'case-everest',
                 href: 'case-everest.html'
+             },{
+                name: 'case-zandwoord',
+                href: 'case-zandwoord.html'
              },{
                 name: 'index',
                 href: 'index.html'

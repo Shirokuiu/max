@@ -1,6 +1,10 @@
 .case-description {
   display: flex;
   align-items: center;
+  &--everest {
+    position: relative;
+    top: -52px;
+  }
 }
 
 .case-description-block {
@@ -28,4 +32,21 @@
   font-size: 14px;
   line-height: 16px;
   color: rgba(35, 35, 35, 0.8);
+  &--zendwoord {
+    color: #e9eadb;
+  }
+}
+
+.case-description__blockDots {
+  position: absolute;
+  left: -170px;
+  bottom: 115px;
+  
+  width: 63.333333333333333%;
+  img {
+    display: block;
+  }
+  &--everest {
+    bottom: 104px;
+  }
 }

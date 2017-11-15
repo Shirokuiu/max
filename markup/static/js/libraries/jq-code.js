@@ -34,8 +34,12 @@ $(function () {
       mainNav.removeClass('main-nav--contactsOpen');
       logo.removeClass('logo--contactsOpen');
       pageFooter.removeClass('page-footer--contactsOpen');
-
-      mainNav.find('.main-nav__item--home').addClass('main-nav__item--active');
+      
+      if (mainNav.hasClass('main-nav--innerPage')) {
+        $('.main-nav__item--project').addClass('main-nav__item--active');
+      } else {
+        mainNav.find('.main-nav__item--home').addClass('main-nav__item--active');
+      }
     }
   });
 
@@ -46,6 +50,41 @@ $(function () {
       logo.removeClass('logo--contactsOpen');
       pageFooter.removeClass('page-footer--contactsOpen');
       contactPopup.removeClass('contact__popup--vissible');
+    }
+  });
+  
+  $('.project-slider__nav-control').draggable({
+    axis: 'x',
+    containment: '.project-slider__nav',
+    scroll: false
+  });
+  
+  $('.project-slider__nav').mousemove(function() {
+    var pos = $('.project-slider__nav-control').css('left');
+    var num = parseInt(pos);
+    
+    if (num >= 10) {
+      $('.project-slider__slide--zandwoord').removeClass('project-slider__slide--active');
+      $('.project-slider__slide--everest').addClass('project-slider__slide--active');
+    } else if (num < 10) {
+      $('.project-slider__slide--zandwoord').addClass('project-slider__slide--active');
+      $('.project-slider__slide--everest').removeClass('project-slider__slide--active');
+    } 
+  });
+  
+  $('.project-slider__slide').mouseover(function () {
+    if ($(this).hasClass('project-slider__slide--active')) {
+      return false;
+    } else {
+      $(this).addClass('project-slider__slide--mouseHover');
+    }
+  });
+  
+  $('.project-slider__slide').mouseleave(function () {
+    if ($(this).hasClass('project-slider__slide--active')) {
+      return false;
+    } else {
+      $(this).removeClass('project-slider__slide--mouseHover');
     }
   });
 });

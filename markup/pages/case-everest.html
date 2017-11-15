@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="ru">
   <head>
-    {{> head/head head.defaults}}
+    {{> head/head head.caseEverest}}
   </head>
   <body class="page">
     %=symbols=%
@@ -10,11 +10,11 @@
         <div class="logo">
           <a href="index.html"><img src="%=static=%img/content/logo-case-everest.svg" alt="Logo"></a>
         </div>
-        <nav class="main-nav main-nav--case">
+        <nav class="main-nav main-nav--case main-nav--innerPage">
           <ul class="main-nav__list">
-            <li class="main-nav__items"><a href="#" class="main-nav__item">Projects</a></li>
+            <li class="main-nav__items"><a href="#" class="main-nav__item main-nav__item--project">Projects</a></li>
             <li class="main-nav__items"><a href="index.html" class="main-nav__item main-nav__item--home main-nav__item--active">Home</a></li>
-            <li class="main-nav__items"><a href="#" class="main-nav__item main-nav__item--case">All projects</a></li>
+            <li class="main-nav__items"><a href="projects.html" class="main-nav__item main-nav__item--case">All projects</a></li>
           </ul>
         </nav>
       </header>
@@ -22,7 +22,7 @@
         <div class="case-logo">
           <img src="%=static=%img/content/case-logo-everest.svg" width="216" height="268" alt="Everest">
         </div>
-        <div class="case-description">
+        <div class="case-description case-description--everest">
           <div class="case-description-block case-description-block--title">
             <div class="block-description__border block-description__border--case"></div>
             <h2 class="case-description__headline">Advertising Agency</h2>
@@ -30,6 +30,9 @@
           <div class="case-description-block case-description-block--text">
             <p class="case-description__text">Bolstered with a new identity, Equestrian Canada, the Canadian federation for equestrian sport mandated Locomotive with the redesign of its portal. The tram is a thing of a past, a thing from our childhood.</p>
           </div>
+        </div>
+        <div class="case-description__blockDots case-description__blockDots--everest">
+          <img src="%=static=%img/content/case-dots.svg" alt="Dots">
         </div>
       </main>
       <footer class="page-footer">
@@ -42,7 +45,7 @@
           <p>All Rights Reserved.</p>
         </div>
         <div class="case-nav">
-          <a href="#" class="case-nav__item case-nav__item--prev">Previous</a>
+          <a href="case-zandwoord.html" class="case-nav__item case-nav__item--prev">Previous</a>
           <a href="#" class="case-nav__item case-nav__item--next">Next</a>
         </div>
         <div class="contact">

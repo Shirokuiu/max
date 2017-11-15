@@ -15,29 +15,65 @@
   padding-bottom: 43px;
   
   border-radius: 2px;
+  
+  cursor: pointer;
+  
+  transition: all 0.5s ease;
   &--active {
     position: relative;
-    top: -100px;
     
     box-shadow: 0 65px 65px 3px rgba(0, 0, 0, 0.56);
+    
+    transform: translateY(-100px);
+    transition: all 0.5s ease;
+    .block-description__border {
+      transform: translateX(-39px);
+      transition: all 0.8s ease;
+    }
+    .project-slider__slide-headline {
+      position: relative;
+      
+      transform: translateX(-36px);
+      transition: all 0.8s ease;
+    }
+    .project-slider__slide-link {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+  &--mouseHover {
+    box-shadow: 0 65px 65px -50px rgba(0, 0, 0, 0.56);
+    
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+    .block-description__border {
+      transform: translateX(-39px);
+      transition: all 0.8s ease;
+    }
+    .project-slider__slide-headline {
+      position: relative;
+      
+      transform: translateX(-36px);
+      transition: all 0.8s ease;
+    }
+    .project-slider__slide-link {
+      opacity: 1;
+      cursor: pointer;
+    }
   }
   &--zandwoord {
     margin-right: 50px;
     
     background-color: #282727;
-    .block-description__border {
-      left: -39px;
-    }
-    .project-slider__slide-headline {
-      position: relative;
-      left: -36px;
-    }
     .project-slider__slide-img {
       width: 26.279863481228669%;
     }
   }
   &--everest {
     background-color: #f5ede3;
+    .project-slider__slide-text {
+      color: #232323;
+    }
     .project-slider__slide-img {
       width: 23.549488054607509%;
     }
@@ -58,6 +94,8 @@
   line-height: 42px;
   color: #ef5c5c;
   font-weight: 300;
+  
+  transition: all 0.8s ease;
 }
 
 .project-slider__slide-text {
@@ -78,6 +116,11 @@
   line-height: 18px;
   color: #ef5c5c;
   text-decoration: none;
+  
+  opacity: 0;
+  cursor: default;
+  
+  transition: all 0.8s ease;
 }
 
 .project-slider__slide-img {
@@ -85,4 +128,39 @@
   img {
     display: block;
   }
+}
+
+.project-slider__navWrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 52px;
+}
+
+.project-slider__nav {
+  position: relative;
+  
+  width: 610px;
+  height: 2px;
+  margin: auto;
+  
+  background-color: rgba(233, 234, 219, 0.4);
+}
+
+.project-slider__nav-control {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  
+  background-color: #232323;
+  
+  border-radius: 50%;
+  border: 5px solid #ed5e60;
+  
+  cursor: pointer;
 }
