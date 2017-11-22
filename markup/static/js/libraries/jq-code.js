@@ -18,6 +18,14 @@ $(function () {
       mainNavItem.removeClass('main-nav__item--active');
     }
   });
+  
+  /*mainNavItem.on('mouseover', function () {
+    if ($(this).hasClass('main-nav__item--active')) {
+      return false;
+    } else if ($(this).hasClass('main-nav__item--project')) {
+      
+    }
+  });*/
 
   contactPopupFormItems.on('focusin', function () {
     $(this).addClass('contact__popup-form-items--focus');
@@ -92,14 +100,10 @@ $(function () {
   var parallax = $('.parallax');
   
   blockDescription.on('mousemove', function (e) {
-    console.log('ok');
-    
     var w = blockDescription.width();
     var h = blockDescription.height();
     var offsetX = 0.5 - e.pageX / w;
     var offsetY = 0.5 - e.pageY / h;
-    
-    console.log(w);
     
     parallax.each(function(i, el) {
       var offset = parseInt($(el).data('offset'));
