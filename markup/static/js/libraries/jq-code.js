@@ -87,4 +87,27 @@ $(function () {
       $(this).removeClass('project-slider__slide--mouseHover');
     }
   });
+  
+  var blockDescription = $('.block-description');
+  var parallax = $('.parallax');
+  
+  blockDescription.on('mousemove', function (e) {
+    console.log('ok');
+    
+    var w = blockDescription.width();
+    var h = blockDescription.height();
+    var offsetX = 0.5 - e.pageX / w;
+    var offsetY = 0.5 - e.pageY / h;
+    
+    console.log(w);
+    
+    parallax.each(function(i, el) {
+      var offset = parseInt($(el).data('offset'));
+      var translate = 'translate3d('+ Math.round(offsetX * offset) + 'px,' + Math.round(offsetY * offset) + 'px, 0px';
+      
+      $(el).css({
+        'transform': translate
+      });
+    });
+  });
 });
