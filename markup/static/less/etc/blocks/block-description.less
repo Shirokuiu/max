@@ -32,6 +32,7 @@
   &--square {
     top: 72%;
     left: -35%;
+    z-index: 5;
   }
 }
 
@@ -81,6 +82,11 @@
   color: #c5c6b6;
 }
 
+.block-description__linkWrap {
+  position: relative;
+  z-index: 10;
+}
+
 .block-description__link {
   position: relative;
   left: -20px;
@@ -101,5 +107,10 @@
   
   border-radius: 2px;
   background-color: #ef5c5c;
+  
+  transition: background-color 0.5s ease;
+  &:hover {
+    background-color: #EC787B;
+  }
 }
 

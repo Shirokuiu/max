@@ -19,13 +19,37 @@ $(function () {
     }
   });
   
-  /*mainNavItem.on('mouseover', function () {
+  var mainNavItemHoverProject = $('.main-nav__item--hoverProject');
+  
+  mainNavItem.on('mouseover', function () {
     if ($(this).hasClass('main-nav__item--active')) {
-      return false;
+        return false;
+    } else if ($(this).hasClass('main-nav__item--project') && $(this).hasClass('main-nav__item--active')) {
+        return false;
+    } else if ($(this).parents().find('.main-nav').hasClass('main-nav--contactsOpen')) {
+        return false;       
     } else if ($(this).hasClass('main-nav__item--project')) {
-      
+        $('.main-nav__item--home').addClass('main-nav__item--hoverProject');
+        console.log('Ok');         
+    } else if ($(this).hasClass('main-nav__item--home')) {
+        $('.main-nav__item--project').addClass('main-nav__item--hoverHome');
+        console.log('Ok');         
     }
-  });*/
+  });
+  
+  mainNavItem.on('mouseout', function () {
+    if ($(this).hasClass('main-nav__item--active')) {
+        return false;
+    } else if ($(this).hasClass('main-nav__item--project') && $(this).hasClass('main-nav__item--active')) {
+        return false;
+    } else if ($(this).hasClass('main-nav__item--project')) {
+        $('.main-nav__item--home').removeClass('main-nav__item--hoverProject');
+        console.log('Ok');         
+    } else if ($(this).hasClass('main-nav__item--home')) {
+        $('.main-nav__item--project').removeClass('main-nav__item--hoverHome');
+        console.log('Ok');         
+    }
+  });
 
   contactPopupFormItems.on('focusin', function () {
     $(this).addClass('contact__popup-form-items--focus');
@@ -71,13 +95,23 @@ $(function () {
     var pos = $('.project-slider__nav-control').css('left');
     var num = parseInt(pos);
     
-    if (num >= 10) {
+    console.log(num);
+    if (num >= 10 && num < 20) {
       $('.project-slider__slide--zandwoord').removeClass('project-slider__slide--active');
       $('.project-slider__slide--everest').addClass('project-slider__slide--active');
     } else if (num < 10) {
       $('.project-slider__slide--zandwoord').addClass('project-slider__slide--active');
       $('.project-slider__slide--everest').removeClass('project-slider__slide--active');
-    } 
+    } else if (num >= 20) {
+      /*for (i = 0, len = 1000; i < len; i++) {
+        $('.project-slider__slide--zandwoord').css({
+          'transform': 'translateX(' + -i + 'px)'
+        });
+        $('.project-slider__slide--everest').css({
+          'transform': 'translateX(' + -i + 'px)'
+        });
+        }*/
+      }
   });
   
   $('.project-slider__slide').mouseover(function () {
@@ -99,9 +133,9 @@ $(function () {
   var blockDescription = $('.block-description');
   var parallax = $('.parallax');
   
-  blockDescription.on('mousemove', function (e) {
-    var w = blockDescription.width();
-    var h = blockDescription.height();
+  $(window).on('mousemove', function (e) {
+    var w = $(window).width();
+    var h = $(window).height();
     var offsetX = 0.5 - e.pageX / w;
     var offsetY = 0.5 - e.pageY / h;
     

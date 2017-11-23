@@ -559,6 +559,7 @@ img {
 .block-description__img--square {
   top: 72%;
   left: -35%;
+  z-index: 5;
 }
 .block-description__border {
   position: relative;
@@ -597,6 +598,10 @@ img {
   line-height: 21px;
   color: #c5c6b6;
 }
+.block-description__linkWrap {
+  position: relative;
+  z-index: 10;
+}
 .block-description__link {
   position: relative;
   left: -20px;
@@ -614,6 +619,11 @@ img {
   text-decoration: none;
   border-radius: 2px;
   background-color: #ef5c5c;
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+}
+.block-description__link:hover {
+  background-color: #EC787B;
 }
 .case-description {
   display: -webkit-box;
@@ -1040,6 +1050,40 @@ img {
   width: 100%;
   height: 2px;
   background-color: rgba(232, 68, 74, 0.27);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-nav__item--hoverProject {
+  position: relative;
+}
+.main-nav__item--hoverProject::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  bottom: -6px;
+  width: 182%;
+  height: 2px;
+  background-color: rgba(232, 68, 74, 0.27);
+  -webkit-transform: translate(-136px);
+          transform: translate(-136px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.main-nav__item--hoverHome {
+  position: relative;
+}
+.main-nav__item--hoverHome::before {
+  content: '';
+  position: absolute;
+  left: 1px;
+  bottom: -6px;
+  width: 65%;
+  height: 2px;
+  background-color: rgba(232, 68, 74, 0.27);
+  -webkit-transform: translate(132px);
+          transform: translate(132px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 .main-nav__item--case {
   position: relative;

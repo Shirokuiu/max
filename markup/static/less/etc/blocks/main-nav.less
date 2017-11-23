@@ -83,7 +83,45 @@
       width: 100%;
       height: 2px;
       
-      background-color: rgba(232, 68, 74, 0.27);;
+      background-color: rgba(232, 68, 74, 0.27);
+      
+      transition: all 0.5s ease;
+    }
+  }
+  &--hoverProject {
+    position: relative;
+    &::before {
+      content: '';
+      
+      position: absolute;
+      left: 1px;
+      bottom: -6px;
+      
+      width: 182%;
+      height: 2px;
+      
+      background-color: rgba(232, 68, 74, 0.27);
+      
+      transform: translate(-136px);
+      transition: all 0.5s ease;
+    }
+  }
+  &--hoverHome {
+    position: relative;
+    &::before {
+      content: '';
+      
+      position: absolute;
+      left: 1px;
+      bottom: -6px;
+      
+      width: 65%;
+      height: 2px;
+      
+      background-color: rgba(232, 68, 74, 0.27);
+      
+      transform: translate(132px);
+      transition: all 0.5s ease;
     }
   }
   &--case {
