@@ -1194,13 +1194,14 @@ img {
   line-height: 22px;
   color: #ef5c5c;
 }
-.project-slider {
+.project-slider__line {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 1218px;
 }
 .project-slider__slide {
   box-sizing: border-box;
@@ -1210,7 +1211,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 40.694444444444444%;
+  width: 586px;
   height: 360px;
   padding-top: 43px;
   padding-right: 14px;
