@@ -148,6 +148,11 @@ $(function () {
       });
     });
   });
+  
+  $('.project-slider').slick({
+    arrows: false,
+    dots: true
+  });
 });
 
 /*! jQuery UI - v1.12.1 - 2017-11-15
